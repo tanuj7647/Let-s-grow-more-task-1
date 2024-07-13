@@ -1,0 +1,143 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-new-task form, .filter, .clear {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .add-new-task label, .filter label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .add-new-task input[type="text"], .add-new-task input[type="date"], .filter select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .add-new-task button, .clear button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-new-task button:hover, .clear button:hover {
+    background-color: #0056b3;
+  }
+  
+  .task-list {
+    margin-top: 400px;
+    max-height: calc(100vh - 290px);
+    overflow-y: auto;
+    padding: 10px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .task-list li {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .task-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .task-list div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .task-list button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s;
+  }
+  
+  .task-list button#done {
+    color: green;
+  }
+  
+  .task-list button#done:hover {
+    color: darkgreen;
+  }
+  
+  .task-list button#remove {
+    color: red;
+  }
+  
+  .task-list button#remove:hover {
+    color: darkred;
+  }
+  
+  @media (max-width: 600px) {
+    .task-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .task-list button {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+  

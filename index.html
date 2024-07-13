@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>To Do App</h1>
+        <div class="add-new-task">
+          <form id="new-task" class="new-task">
+            <label>Enter Task</label>
+            <input type="text" placeholder="Enter Task" name="details" />
+            <label>Due</label>
+            <input type="date" placeholder="Select Due time" name="due" />
+            <button type="submit" value="add">Add</button>
+          </form>
+        </div>
+        <div class="filter">
+          <label>Filter</label>
+          <select id="filter">
+            <option value="none">None</option>
+            <option value="done">Done</option>
+            <option value="due">Due</option>
+          </select>
+        </div>
+        <div class="clear">
+          <button id="clear-taskbar">Remove All</button>
+        </div>
+      </div>
+      <div class="task-list" id="task-list">
+        <ul></ul>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
